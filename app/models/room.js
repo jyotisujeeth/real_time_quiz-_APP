@@ -16,6 +16,7 @@ var findOne = function (data, callback) {
   roomModel.findOne(data, callback);
 };
 
+
 var findById = function (id, callback) {
   roomModel.findById(id, callback);
 };
