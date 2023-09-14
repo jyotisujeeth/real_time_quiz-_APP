@@ -25,6 +25,7 @@ var init = function () {
         callbackURL: "/auth/twitter/callback",
         profileFields: ["id", "displayName", "photos"],
       },
+      
       redis: {
         host: redisURI.hostname,
         port: redisURI.port,

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A Real Time Quiz Application built using Node.js, Express, Mongoose, Socket.io & Passport.",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -20,5 +21,8 @@
     "socket.io": "^2.0.3",
     "uuid": "^3.1.0",
     "winston": "^2.2.0"
-  }
+  },
+  "main": "server.js",
+  "author": "",
+  "license": "ISC"
 }
