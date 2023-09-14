@@ -3,3 +3,8 @@ node_modules
 
 # Logs
 debug.log
+
+#infromation
+config.json
+
+.env
