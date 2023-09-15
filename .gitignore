@@ -8,3 +8,5 @@ debug.log
 config.json
 
 .env
+# Local Netlify folder
+.netlify
