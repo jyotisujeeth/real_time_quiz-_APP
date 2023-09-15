@@ -1,11 +1,27 @@
 {
 	"db": {
 		"username": "<jyotisujeeth>",
-		"password": "<myself&me>",
-		"host": "<root>",
-		"port": "<MongoDBPort>",
-		"name": "<MongoDBName>"
+		"password": "<123jyoti>",
+		"host": "<localhost:27017>",
+		"port": "<3000>",
+		"name": "<quizapp>"
 	},
-	"sessionSecret": "<abcdef>"
-	
+	"sessionSecret": "<RandomString>",
+	"facebook": {
+		"clientID": "<AppID>",
+		"clientSecret": "<AppSecret>",
+		"callbackURL": "/auth/facebook/callback",
+		"profileFields": ["id", "displayName", "photos"]
+	},
+	"twitter": {
+		"consumerKey": "<ConsumerKey>",
+		"consumerSecret": "<ConsumerSecret>",
+		"callbackURL": "/auth/twitter/callback",
+		"profileFields": ["id", "displayName", "photos"]
+	},
+	"redis": {
+		"host": "127.0.0.1",
+		"port": 6379,
+		"password": ""
+	}
 }

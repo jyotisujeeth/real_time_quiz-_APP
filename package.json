@@ -4,7 +4,6 @@
   "description": "A Real Time Quiz Application built using Node.js, Express, Mongoose, Socket.io & Passport.",
   "scripts": {
     "start": "node server.js"
-    
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -14,6 +13,7 @@
     "ejs": "^2.5.1",
     "express": "^4.14.0",
     "express-session": "^1.14.0",
+    "mongodb": "^6.1.0",
     "mongoose": "^4.7.5",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",

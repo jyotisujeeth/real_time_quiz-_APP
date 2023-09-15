@@ -6,7 +6,6 @@ var logger = require("../logger");
 
 // Connect to the database
 
-
 // construct the database URI and encode username and password.
 // var dbURI = "mongodb://" +
 // 			encodeURIComponent(config.db.username) + ":" +
@@ -14,9 +13,12 @@ var logger = require("../logger");
 // 			config.db.host + ":" +
 // 			config.db.port + "/" +
 // 			config.db.name;
-Mongoose.connect("mongodb://localhost:27017//quiz_one", {
-  useMongoClient: true,
-});
+mongodb: Mongoose.connect(
+  "mongodb+srv://jyotisujeeth:%3C123jyoti%3E@cluster0.xiveu3q.mongodb.net/",
+  {
+    useMongoClient: true,
+  }
+);
 
 // Throw an error if the connection fails
 Mongoose.connection.on("error", function (err) {
