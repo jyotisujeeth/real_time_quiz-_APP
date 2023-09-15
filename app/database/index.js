@@ -12,9 +12,12 @@ var logger = require("../logger");
 // 			config.db.host + ":" +
 // 			config.db.port + "/" +
 // 			config.db.name;
-Mongoose.connect("mongodb+srv://jyoti:sujeeth@cluster0.0bqlahz.mongodb.net/quizapp", {
-  useMongoClient: true,
-});
+Mongoose.connect(
+  "mongodb+srv://jyoti:sujeeth@cluster0.0bqlahz.mongodb.net/quizapp",
+  {
+    useMongoClient: true,
+  }
+);
 
 // Throw an error if the connection fails
 Mongoose.connection.on("error", function (err) {
@@ -34,8 +37,6 @@ module.exports = {
     question: require("./schemas/question.js"),
   },
 };
-
-
 
 const mongodb = require("mongodb");
 const MongoClient = mongodb.MongoClient;
