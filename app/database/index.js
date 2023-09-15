@@ -1,8 +1,12 @@
 "use strict";
-
+const mongodb = require("mongodb");
+const MongoClient = mongodb.MongoClient;
 var config = require("../config");
 var Mongoose = require("mongoose");
 var logger = require("../logger");
+
+//const mongoConnect 
+
 
 // Connect to the database
 // construct the database URI and encode username and password.
@@ -12,36 +16,7 @@ var logger = require("../logger");
 // 			config.db.host + ":" +
 // 			config.db.port + "/" +
 // 			config.db.name;
-Mongoose.connect(
-  "mongodb+srv://jyoti:sujeeth@cluster0.0bqlahz.mongodb.net/quizapp",
-  {
-    useMongoClient: true,
-  }
-);
-
-// Throw an error if the connection fails
-Mongoose.connection.on("error", function (err) {
-  if (err) throw err;
-});
-
-// mpromise (mongoose's default promise library) is deprecated,
-// Plug-in your own promise library instead.
-// Use native promises
-Mongoose.Promise = global.Promise;
-
-module.exports = {
-  Mongoose,
-  models: {
-    user: require("./schemas/user.js"),
-    room: require("./schemas/room.js"),
-    question: require("./schemas/question.js"),
-  },
-};
-
-const mongodb = require("mongodb");
-const MongoClient = mongodb.MongoClient;
-
-const mongoConnect = (callback) => {
+Mongoose.connect= (callback) => {
   mongoose
     .connect(
       // "mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.d7wxssa.mongodb.net/expenseDb"
@@ -56,11 +31,22 @@ const mongoConnect = (callback) => {
       throw err;
     });
 };
+// mpromise (mongoose's default promise library) is deprecated,
+// Plug-in your own promise library instead.
+// Use native promises
+Mongoose.Promise = global.Promise;
 
-module.exports = mongoConnect;
+module.exports = {
+  Mongoose,
+  models: {
+    user: require("./schemas/user.js"),
+    room: require("./schemas/room.js"),
+    question: require("./schemas/question.js"),
+  },
+};
 
-const mongoConnect = require("./util/database").mongoConnect;
 
-mongoConnect(() => {
-  app.listen(3000);
-});
+//module.exports = mongoConnect;
+
+
+

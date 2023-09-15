@@ -15,10 +15,8 @@ var ioServer = require("./app/socket")(app);
 var logger = require("./app/logger");
 
 // Set the port number
-var port = 3000;
-mongoConnect(() => {
-  app.listen(3000);
-});
+var port = process.env.PORT || 3000;
+
 // View engine setup
 app.set("views", path.join(__dirname, "app/views"));
 app.set("view engine", "ejs");
@@ -40,4 +38,4 @@ app.use(function (req, res, next) {
   res.status(404).sendFile(process.cwd() + "/app/views/404.htm");
 });
 
-//ioServer.listen(port);
+ioServer.listen(port);
