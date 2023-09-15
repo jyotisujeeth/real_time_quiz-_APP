@@ -2,26 +2,10 @@
 	"db": {
 		"username": "<jyoti>",
 		"password": "<sujeeth>",
-		"host": "<ac-2lcqwa4-shard-00-02.0bqlahz.mongodb.net:27017>",
+		"host": "<mongodb+srv://jyoti:sujeeth@cluster0.0bqlahz.mongodb.net/>",
 		"port": "<3000>",
 		"name": "<quizapp>"
 	},
-	"sessionSecret": "<RandomString>",
-	"facebook": {
-		"clientID": "<AppID>",
-		"clientSecret": "<AppSecret>",
-		"callbackURL": "/auth/facebook/callback",
-		"profileFields": ["id", "displayName", "photos"]
-	},
-	"twitter": {
-		"consumerKey": "<ConsumerKey>",
-		"consumerSecret": "<ConsumerSecret>",
-		"callbackURL": "/auth/twitter/callback",
-		"profileFields": ["id", "displayName", "photos"]
-	},
-	"redis": {
-		"host": "127.0.0.1",
-		"port": 6379,
-		"password": ""
-	}
+	"sessionSecret": "<RandomString>"
+	
 }

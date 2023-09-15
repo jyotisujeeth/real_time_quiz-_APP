@@ -1,5 +1,10 @@
 "use strict";
 
+
+// var roomModel = require("../database").models.room;
+// var User = require("../models/user");
+
+
 var userModel = require("../database").models.user;
 
 var create = function (data, callback) {
